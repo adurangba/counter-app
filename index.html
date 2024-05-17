@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="show"></div>
+        <button class="add">&plus;</button>
+        <button class="minus">&minus;</button>
+    </div>
+</body>
+<script>
+    let display = document.querySelector(".show");
+    let add = document.querySelector(".add");
+    let minus = document.querySelector('.minus');
+
+    let num = 0;
+
+    minus.addEventListener('click', function () {
+        if (num == 0) {
+            num = 0
+        } else {
+            num -= 1;
+            display.innerText = num;
+            console.log(num);
+        }
+    });
+
+
+    add.addEventListener('click', function () {
+
+        num += 1;
+        display.innerText = num;
+        console.log(num);
+    });
+</script>
+
+</html>
